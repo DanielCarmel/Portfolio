@@ -1,5 +1,5 @@
-// progress bar
 $(document).ready(function(){
+    // progress bar
     $(document).on("scroll", function(){
         var barTotal = ($(window).height() * 2) + ($(window).width() * 2)
         var scrollTotal = $(document).height() - $(window).height()
