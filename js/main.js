@@ -17,13 +17,26 @@ $(document).ready(function(){
         $("div.bar-4").css("height", 100 * bar4 + "%")
     });
     
-    // Jump to hire section
+    // Open menu
+    $('#navMenuIcon').click(function(){
+        $('#navMenuIcon').toggleClass('is-active');
+        if($('#navMenuIcon').hasClass('is-active')){
+            $('#navbarMenu').show();
+            $('#navMenuIcon').css('z-index', 3);
+        } else {
+            $('#navbarMenu').hide();
+        }
+    });
+
+    // Jump to section
     $("#bar-home, #bar-about, #bar-projects, #bar-contact").click(function() {
+        $('#navMenuIcon').removeClass('is-active');
+        $('#navbarMenu').hide();
         var href = $(this).attr('href');
         $('html, body').animate({
             scrollTop: $(href).offset().top
         }, 2000);
         return false
     });
-    
+
 });
