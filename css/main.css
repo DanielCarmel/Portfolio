@@ -38,6 +38,15 @@
 }
 /* End of progress bar ======================= */
 
+/* Menu ======================= */
+#navMenuIcon {
+    position: fixed;
+}
+
+#navbarMenu {
+    display: none;
+}
+
 ::-webkit-scrollbar {
     width: 0 !important
 }
