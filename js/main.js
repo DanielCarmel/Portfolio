@@ -21,17 +21,16 @@ $(document).ready(function(){
     $('#navMenuIcon').click(function(){
         $('#navMenuIcon').toggleClass('is-active');
         if($('#navMenuIcon').hasClass('is-active')){
-            $('#navbarMenu').show();
-            $('#navMenuIcon').css('z-index', 3);
+            $('.overlay').width('100%')
         } else {
-            $('#navbarMenu').hide();
+            $('.overlay').width('0%')
         }
     });
 
     // Jump to section
     $("#bar-home, #bar-about, #bar-projects, #bar-contact").click(function() {
         $('#navMenuIcon').removeClass('is-active');
-        $('#navbarMenu').hide();
+        $('.overlay').width('0%');
         var href = $(this).attr('href');
         $('html, body').animate({
             scrollTop: $(href).offset().top
