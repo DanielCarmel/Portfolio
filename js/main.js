@@ -27,7 +27,7 @@ $(document).ready(function(){
         }
     });
 
-    // Jump to section
+    // Jump to section from menu
     $("#bar-home, #bar-about, #bar-projects, #bar-contact").click(function() {
         $('#navMenuIcon').removeClass('is-active');
         $('.overlay').width('0%');
@@ -38,4 +38,21 @@ $(document).ready(function(){
         return false
     });
 
+
+    // Scroll between sections
+    var lastScrollTop = 0;
+
+    $(window).scroll(function(){
+        var currPageOffset = $(document).scrollTop();
+
+        if(currPageOffset > lastScrollTop){
+            // TO DO add scrolling thing
+            console.log('down');
+        } else {
+            // TO DO add scrolling thing
+            console.log('up');
+        }
+
+        lastScrollTop = currPageOffset <= 0 ? 0 : currPageOffset;
+    });
 });
