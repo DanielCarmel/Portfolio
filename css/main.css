@@ -1,8 +1,8 @@
 /* Progress bar ======================= */
 .bar-1, .bar-3 {
     position: fixed;
-    height: 8px;
-    background-color: #3b8334;
+    height: 4px;
+    background-color: #b9b9b9;
     z-index: 900;
     width: 0%;
     box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.18);
@@ -10,8 +10,8 @@
 
 .bar-2, .bar-4 {
     position: fixed;
-    width: 8px;
-    background-color: #3b8334;
+    width: 4px;
+    background-color: #b9b9b9;
     z-index: 900;
     height: 0%;
     box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.18);
@@ -78,6 +78,7 @@ body {
     z-index: 3;
     right: 3%;
     top: 4%;
+    outline: none;
 }
 
 ::-webkit-scrollbar {
