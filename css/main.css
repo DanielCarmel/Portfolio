@@ -33,7 +33,7 @@ body {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 2;
+    z-index: 100;
     top: 0;
     right: 0;
     background-color: rgb(0,0,0);
@@ -75,7 +75,7 @@ body {
 
 #navMenuIcon {
     position: fixed;
-    z-index: 3;
+    z-index: 200;
     right: 3%;
     top: 4%;
     outline: none;
@@ -86,5 +86,10 @@ body {
 }
 
 section {
-    height: 100vh;
+    height: 99vh;
+}
+
+.blurBg {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
 }

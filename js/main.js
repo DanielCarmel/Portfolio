@@ -20,6 +20,7 @@ $(document).ready(function(){
     // Open menu
     $('#navMenuIcon').click(function(){
         $('#navMenuIcon').toggleClass('is-active');
+        $('#sections').toggleClass('blurBg');
         if($('#navMenuIcon').hasClass('is-active')){
             $('.overlay').width('100%')
         } else {
@@ -30,10 +31,12 @@ $(document).ready(function(){
     // Jump to section from menu
     $("#bar-home, #bar-about, #bar-projects, #bar-contact").click(function() {
         $('#navMenuIcon').removeClass('is-active');
+        $('#sections').removeClass('blurBg');
+
         $('.overlay').width('0%');
-        var href = $(this).attr('href');
+        currSection = $(this).attr('href');
         $('html, body').animate({
-            scrollTop: $(href).offset().top
+            scrollTop: $(currSection).offset().top
         }, 2000);
         return false
     });
@@ -41,16 +44,28 @@ $(document).ready(function(){
 
     // Scroll between sections
     var lastScrollTop = 0;
+    var sections = []
+    $('#navbarMenu').children().each(function(){
+        sections.push($(this).attr('href'))
+    })
+    var currSection = '#home';
 
-    $(window).scroll(function(){
+    $(document).smartscroll(function(){
         var currPageOffset = $(document).scrollTop();
-
         if(currPageOffset > lastScrollTop){
             // TO DO add scrolling thing
-            console.log('down');
+            currSection = sections[sections.indexOf(currSection) - 1]
+            console.log(currSection)
+            $('html, body').animate({
+                scrollTop: $(sections[sections.indexOf(currSection) - 1]).offset()
+            }, 2000);
         } else {
             // TO DO add scrolling thing
-            console.log('up');
+            currSection = sections[sections.indexOf(currSection) + 1]
+            console.log(currSection)
+            $('html, body').animate({
+                scrollTop: $(sections[sections.indexOf(currSection) + 1]).offset()
+            }, 2000);
         }
 
         lastScrollTop = currPageOffset <= 0 ? 0 : currPageOffset;
