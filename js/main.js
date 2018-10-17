@@ -38,7 +38,6 @@ $(document).ready(function(){
         $('html, body').animate({
             scrollTop: $(currSection).offset().top
         }, 2000);
-        return false
     });
 
 
@@ -54,20 +53,27 @@ $(document).ready(function(){
         var currPageOffset = $(document).scrollTop();
         if(currPageOffset > lastScrollTop){
             // TO DO add scrolling thing
-            currSection = sections[sections.indexOf(currSection) - 1]
-            console.log(currSection)
-            $('html, body').animate({
-                scrollTop: $(sections[sections.indexOf(currSection) - 1]).offset()
-            }, 2000);
+            // currSection = sections[sections.indexOf(currSection) + 1]
+            // console.log(currSection)
+            // $('html, body').animate({
+            //     scrollTop: $(sections[sections.indexOf(currSection) + 1]).offset()
+            // }, 2000);
+            console.log('down')
         } else {
             // TO DO add scrolling thing
-            currSection = sections[sections.indexOf(currSection) + 1]
-            console.log(currSection)
-            $('html, body').animate({
-                scrollTop: $(sections[sections.indexOf(currSection) + 1]).offset()
-            }, 2000);
+            // currSection = sections[sections.indexOf(currSection) - 1]
+            // console.log(currSection)
+            // $('html, body').animate({
+            //     scrollTop: $(sections[sections.indexOf(currSection) - 1]).offset()
+            // }, 2000);
+            console.log('up')
         }
 
         lastScrollTop = currPageOffset <= 0 ? 0 : currPageOffset;
     });
+
+    $(window).scroll(_.throttle(function(){
+        console.log('scroll')
+    }, 100));
+    
 });
