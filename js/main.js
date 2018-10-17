@@ -32,48 +32,70 @@ $(document).ready(function(){
     $("#bar-home, #bar-about, #bar-projects, #bar-contact").click(function() {
         $('#navMenuIcon').removeClass('is-active');
         $('#sections').removeClass('blurBg');
-
         $('.overlay').width('0%');
         currSection = $(this).attr('href');
+        console.log(currSection)
         $('html, body').animate({
             scrollTop: $(currSection).offset().top
         }, 2000);
     });
 
-
     // Scroll between sections
-    var lastScrollTop = 0;
+    var currSection = '#home';
+    var lastScrollTop = $(document).scrollTop();
     var sections = []
     $('#navbarMenu').children().each(function(){
         sections.push($(this).attr('href'))
     })
-    var currSection = '#home';
+    var circularSectionsArray = new Circular(sections);
 
-    $(document).smartscroll(function(){
-        var currPageOffset = $(document).scrollTop();
-        if(currPageOffset > lastScrollTop){
-            // TO DO add scrolling thing
-            // currSection = sections[sections.indexOf(currSection) + 1]
-            // console.log(currSection)
-            // $('html, body').animate({
-            //     scrollTop: $(sections[sections.indexOf(currSection) + 1]).offset()
-            // }, 2000);
-            console.log('down')
+    // Scroll between sections smoothly
+    $(document).scroll(throttle(function(){
+        var currScrollTop = $(document).scrollTop();
+        if(currScrollTop < lastScrollTop){
+            // TO DO add scrolling up handle
+            $('html, body').animate({scrollTop: $(circularSectionsArray.prev()).offset().top}, 2000);
+            console.log(circularSectionsArray.prev())
         } else {
-            // TO DO add scrolling thing
-            // currSection = sections[sections.indexOf(currSection) - 1]
-            // console.log(currSection)
-            // $('html, body').animate({
-            //     scrollTop: $(sections[sections.indexOf(currSection) - 1]).offset()
-            // }, 2000);
-            console.log('up')
+            // TO DO add scrolling down handle
+            $('html, body').animate({scrollTop: $(circularSectionsArray.next()).offset().top}, 2000);
+            console.log(circularSectionsArray.next())
         }
 
-        lastScrollTop = currPageOffset <= 0 ? 0 : currPageOffset;
-    });
+        lastScrollTop = currScrollTop
+    }, 1000));
 
-    $(window).scroll(_.throttle(function(){
-        console.log('scroll')
-    }, 100));
+    function throttle(fn, wait) {
+        var time = Date.now();
+        return function() {
+          if ((time + wait - Date.now()) < 0) {
+            fn();
+            time = Date.now();
+          }
+        }
+    }
     
+    // Set the array of the sectoins
+    function Circular(arr, startIntex){
+        this.arr = arr;
+        this.currentIndex = startIntex || 0;
+    }
+    
+    Circular.prototype.next = function(){
+        var i = this.currentIndex, arr = this.arr;
+        this.currentIndex = i < arr.length-1 ? i+1 : 0;
+        return this.current();
+    }
+    
+    Circular.prototype.prev = function(){
+        var i = this.currentIndex, arr = this.arr;
+        this.currentIndex = i > 0 ? i-1 : arr.length-1;
+        return this.current();
+    }
+    
+    Circular.prototype.current = function(){
+        return this.arr[this.currentIndex];
+    }
+    // End of circular array functions
+
 });
