@@ -43,11 +43,11 @@ $(document).ready(function(){
     // Scroll between sections
     var currSection = '#home';
     var lastScrollTop = $(document).scrollTop();
-    var sections = []
+    var sectionsArray = []
     $('#navbarMenu').children().each(function(){
-        sections.push($(this).attr('href'))
+        sectionsArray.push($(this).attr('href'))
     })
-    var circularSectionsArray = new Circular(sections);
+    var circularSectionsArray = new Circular(sectionsArray);
 
     // Scroll between sections smoothly
     $(document).scroll(throttle(function(){
@@ -63,7 +63,7 @@ $(document).ready(function(){
         }
 
         lastScrollTop = currScrollTop
-    }, 1000));
+    }, 1500));
 
     function throttle(fn, wait) {
         var time = Date.now();
