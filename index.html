@@ -6,62 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Daniel Carmel</title>
-    <link rel="stylesheet" type="text/css" href="css/hamburger.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
 
 <body>
+        <div id="sections" class="doScroller"></div>
+                <!--Home section-->
+                <section id="home1" data-section-name="home" class="panel home">
+                    <br/>
+                    <h1>Home</h1>
+                </section>
+        
+                <!-- About section-->
+                <section id="about2" data-section-name="about" class="panel about">
+                    <br/>
+                    <h1>About</h1>
+                </section>
+        
+                <!-- Projects section-->
+                <section id="projects3" data-section-name="projects" class="panel projects">
+                    <br/>
+                    <h1>Projects</h1>
+                </section>
+        
+                <!-- Contact section-->
+                <section id="contact4" data-section-name="contact" class="panel contact">
+                    <br/>
+                    <h1>contact</h1>
+                </section>
+            </div>
     <!-- progress bar -->
     <div class="bar-1"></div>
     <div class="bar-2"></div>
     <div class="bar-3"></div>
     <div class="bar-4"></div>
 
-    <!-- Begin of menu icon toggler -->
-    <button id="navMenuIcon" class="hamburger hamburger--elastic" type="button">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
-    <!-- End of menu icon toggler -->
-
-    <!-- Begin of mainmenu -->
-    <div class="overlay">
-        <div id="navbarMenu" class="overlay-content">
-            <a id="bar-home" href="#home">Home</a>
-            <a id="bar-about" href="#about">About</a>
-            <a id="bar-projects" href="#projects">Projects</a>
-            <a id="bar-contact" href="#contact">Contact</a>
-        </div>
-    </div>
-    <!-- End of mainmenu -->
-
-    <div id="sections" class="doScroller">
-        <!--Home section-->
-        <section id="home" class="">
-            <br/>
-            <h1>Home</h1>
-        </section>
-
-        <!-- About section-->
-        <section id="about" class="">
-            <br/>
-            <h1>About</h1>
-        </section>
-
-        <!-- Projects section-->
-        <section id="projects" class="">
-            <br/>
-            <h1>Projects</h1>
-        </section>
-
-        <!-- Contact section-->
-        <section id="contact" class="">
-            <br/>
-            <h1>contact</h1>
-        </section>
-    </div>
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.scrollify.js"></script>
     <script src="js/main.js"></script>
 </body>
 

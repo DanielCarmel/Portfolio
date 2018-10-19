@@ -16,86 +16,31 @@ $(document).ready(function(){
         $("div.bar-3").css("width",  100 * bar3 + "%")
         $("div.bar-4").css("height", 100 * bar4 + "%")
     });
+
+});
+
+$.scrollify({
+    section: ".panel",
+    scrollSpeed: 1500,
+    scrollbars: false,
+    before: function(i, panels){
+        var ref = panels[i].attr("data-section-name");
+        $(".pagination .active").removeClass("active");
+        $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+    },
+    afterRender: function(){
+        var pagination = "<ul class=\"pagination\">";
+        var activeClass = "";
+        $(".panel").each(function(i) {
+            activeClass = "";
+            if(i===0) {
+              activeClass = "active";
+            }
+            pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
+          });
     
-    // Open menu
-    $('#navMenuIcon').click(function(){
-        $('#navMenuIcon').toggleClass('is-active');
-        $('#sections').toggleClass('blurBg');
-        if($('#navMenuIcon').hasClass('is-active')){
-            $('.overlay').width('100%')
-        } else {
-            $('.overlay').width('0%')
-        }
-    });
-
-    // Jump to section from menu
-    $("#bar-home, #bar-about, #bar-projects, #bar-contact").click(function() {
-        $('#navMenuIcon').removeClass('is-active');
-        $('#sections').removeClass('blurBg');
-        $('.overlay').width('0%');
-        currSection = $(this).attr('href');
-        console.log(currSection)
-        $('html, body').animate({
-            scrollTop: $(currSection).offset().top
-        }, 2000);
-    });
-
-    // Scroll between sections
-    var currSection = '#home';
-    var lastScrollTop = $(document).scrollTop();
-    var sectionsArray = []
-    $('#navbarMenu').children().each(function(){
-        sectionsArray.push($(this).attr('href'))
-    })
-    var circularSectionsArray = new Circular(sectionsArray);
-
-    // Scroll between sections smoothly
-    $(document).scroll(throttle(function(){
-        var currScrollTop = $(document).scrollTop();
-        if(currScrollTop < lastScrollTop){
-            // TO DO add scrolling up handle
-            $('html, body').animate({scrollTop: $(circularSectionsArray.prev()).offset().top}, 2000);
-            console.log(circularSectionsArray.prev())
-        } else {
-            // TO DO add scrolling down handle
-            $('html, body').animate({scrollTop: $(circularSectionsArray.next()).offset().top}, 2000);
-            console.log(circularSectionsArray.next())
-        }
-
-        lastScrollTop = currScrollTop
-    }, 1500));
-
-    function throttle(fn, wait) {
-        var time = Date.now();
-        return function() {
-          if ((time + wait - Date.now()) < 0) {
-            fn();
-            time = Date.now();
-          }
-        }
+          pagination += "</ul>";
+          $(".home").append(pagination);
+          $(".pagination a").on("click",$.scrollify.move);
     }
-    
-    // Set the array of the sectoins
-    function Circular(arr, startIntex){
-        this.arr = arr;
-        this.currentIndex = startIntex || 0;
-    }
-    
-    Circular.prototype.next = function(){
-        var i = this.currentIndex, arr = this.arr;
-        this.currentIndex = i < arr.length-1 ? i+1 : 0;
-        return this.current();
-    }
-    
-    Circular.prototype.prev = function(){
-        var i = this.currentIndex, arr = this.arr;
-        this.currentIndex = i > 0 ? i-1 : arr.length-1;
-        return this.current();
-    }
-    
-    Circular.prototype.current = function(){
-        return this.arr[this.currentIndex];
-    }
-    // End of circular array functions
-
 });
