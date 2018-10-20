@@ -1,27 +1,14 @@
 /* Progress bar ======================= */
-.bar-1, .bar-3 {
+.bar {
     position: fixed;
     height: 4px;
-    background-color: #fff;
+    background-color: rgb(94, 94, 94);
     z-index: 900;
     width: 0%;
     box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.18);
+    top: 0;
+    left: 0;
 }
-
-.bar-2, .bar-4 {
-    position: fixed;
-    width: 4px;
-    background-color: #fff;
-    z-index: 900;
-    height: 0%;
-    box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.18);
-}
-
-.bar-1 {top: 0; left: 0;}
-.bar-2 {top: 0; right: 0;}
-.bar-3 {bottom: 0; right: 0;}
-.bar-4 {bottom: 0; left: 0;}
-
 /* End of progress bar ======================= */
 
 /* Side menu ===========================*/
