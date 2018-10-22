@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielCarmel/Portfolio.git"
+  },
+  "author": "Daniel Carmel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielCarmel/Portfolio/issues"
+  },
+  "homepage": "https://github.com/DanielCarmel/Portfolio#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}
