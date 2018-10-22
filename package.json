@@ -1,8 +1,8 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "My personal website",
-  "main": "app.js",
+  "description": "my personal site",
+  "main": "index.js",
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,9 +16,5 @@
   "bugs": {
     "url": "https://github.com/DanielCarmel/Portfolio/issues"
   },
-  "homepage": "https://github.com/DanielCarmel/Portfolio#readme",
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4"
-  }
+  "homepage": "https://github.com/DanielCarmel/Portfolio#readme"
 }
