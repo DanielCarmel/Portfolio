@@ -1,11 +1,6 @@
 $(document).ready(function(){
     // progress bar
     $(document).on("scroll", function(){
-        //var barTotal = $(window).width()
-        //var scrollTotal = $(document).height() - $(window).height()
-        //var pixels = $(document).scrollTop()
-        //var pc = ($(document).scrollTop()) / ($(document).height() - $(window).height())
-        //var barAcross = $(window).width() / ($(window).width())
         var bar = (($(document).scrollTop()) / ($(document).height() - $(window).height())) / ($(window).width() / ($(window).width()))
         $("div.bar").css("width",  100 * bar + "%")
     });
@@ -14,7 +9,7 @@ $(document).ready(function(){
 
 $.scrollify({
     section: ".panel",
-    scrollSpeed: 1500,
+    scrollSpeed: 1000,
     scrollbars: false,
     before: function(i, panels){
         var ref = panels[i].attr("data-section-name");
