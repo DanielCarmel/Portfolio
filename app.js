@@ -10,8 +10,3 @@ app.listen(port, function(){
 })
 
 app.use(express.static(path.join(__dirname, '/public')));
-
-app.post('/submit', function(res, req){
-    console.log(res.body.lastName)
-    //https://freefrontend.com/css-forms/
-})

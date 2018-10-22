@@ -20,13 +20,19 @@
             <source src="img/coding.mp4" type="video/mp4">
         </video>
 
-
-        <form action="/submit" method="POST">
-            First Name: <input name="firstName" type="text" /> <br />
-            Last Name: <input name="lastName" type="text" /> <br />
-            <input type="submit" />
+        <form method="POST" action="https://formspree.io/danielcarmel6@gmail.com">
+            <input type="text" id="name" name="name" placeholder="Your name">
+            <input type="email" name="email" placeholder="Your email">
+            <label for="summary">Project Summary</label>
+            <textarea name="summary" placeholder="Please give a quick summary of the project you’re working on."></textarea>
+            <p class="label">When are you looking to get started?</p>
+            <select id="start" name="start">
+                <option value="ASAP!">ASAP!</option>
+                <option value="In a few weeks">In a few weeks.</option>
+                <option value="In a few months">In a few months.</option>
+            </select>
+            <button type="submit">Send</button>
         </form>
-
 
     </section>
 
