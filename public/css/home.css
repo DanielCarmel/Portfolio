@@ -1,0 +1,566 @@
+/* import this code: https://codepen.io/mattstvartak/pen/amWAVA */
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+.wrapper div{
+    margin-bottom: 50px;
+}
+.wrapper {
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 90%;
+    font-size: 0;
+    transform: translate(-50%);
+  }
+  .letter {
+    width: 60px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    overflow: hidden;
+    margin: 0 0;
+    font-family: Audiowide;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: #eee;
+  }
+  @media (max-width: 625px) {
+  }
+  .letter:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    word-break: break-all;
+    background-color: #1d1f20;
+  }
+  .letter:nth-child(1):before {
+    content: "$?2%_*@3<>4#1&";
+    margin-top: -264px;
+    animation-name: letter1;
+    animation-duration: 2.02667s;
+    animation-delay: 0.84s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter1 {
+    from {
+      margin-top: -264px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(2):before {
+    content: "?<>*%41#&@3_2$";
+    margin-top: -240px;
+    animation-name: letter2;
+    animation-duration: 1.38182s;
+    animation-delay: 0.94s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter2 {
+    from {
+      margin-top: -240px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(3):before {
+    content: "3@#&2<%>_14?*$";
+    margin-top: -48px;
+    animation-name: letter3;
+    animation-duration: 3.73333s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter3 {
+    from {
+      margin-top: -48px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(4):before {
+    content: ">&2@%41*_$<3#?";
+    margin-top: -96px;
+    animation-name: letter4;
+    animation-duration: 4.024s;
+    animation-delay: 0.46s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter4 {
+    from {
+      margin-top: -96px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(5):before {
+    content: "*$?1&@%3<>4_#2";
+    margin-top: -288px;
+    animation-name: letter5;
+    animation-duration: 5.04s;
+    animation-delay: 0.22s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter5 {
+    from {
+      margin-top: -288px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(6):before {
+    content: "4@$><#*32_1%?&";
+    margin-top: -72px;
+    animation-name: letter6;
+    animation-duration: 4.465s;
+    animation-delay: 0.34s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter6 {
+    from {
+      margin-top: -72px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(7):before {
+    content: ">&<1$4?#2%*@_3";
+    margin-top: -120px;
+    animation-name: letter7;
+    animation-duration: 1.99167s;
+    animation-delay: 0.83s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter7 {
+    from {
+      margin-top: -120px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(8):before {
+    content: "14>$@32<%_*&?#";
+    margin-top: -312px;
+    animation-name: letter8;
+    animation-duration: 5.81s;
+    animation-delay: 0.26s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter8 {
+    from {
+      margin-top: -312px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(9):before {
+    content: "&*?13#<@$2_>4%";
+    margin-top: -60px;
+    animation-name: letter9;
+    animation-duration: 1.03s;
+    animation-delay: 0.42s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter9 {
+    from {
+      margin-top: -60px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(10):before {
+    content: "$3*>41&?#@<_%2";
+    margin-top: -216px;
+    animation-name: letter10;
+    animation-duration: 2.764s;
+    animation-delay: 0.72s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter10 {
+    from {
+      margin-top: -216px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(11):before {
+    content: "1%&#$<3*>4_?2@";
+    margin-top: -216px;
+    animation-name: letter11;
+    animation-duration: 2.953s;
+    animation-delay: 0.69s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter11 {
+    from {
+      margin-top: -216px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(12):before {
+    content: "3_&<%1>?2#4$@*";
+    margin-top: -96px;
+    animation-name: letter12;
+    animation-duration: 4.36s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter12 {
+    from {
+      margin-top: -96px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(13):before {
+    content: "*$4>2@_<&%13?#";
+    margin-top: -60px;
+    animation-name: letter13;
+    animation-duration: 1.065s;
+    animation-delay: 0.41s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter13 {
+    from {
+      margin-top: -60px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(14):before {
+    content: "$>?<%3*@2_1&#4";
+    margin-top: -216px;
+    animation-name: letter14;
+    animation-duration: 3.142s;
+    animation-delay: 0.66s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter14 {
+    from {
+      margin-top: -216px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(15):before {
+    content: "3_@?#&*$2%1><4";
+    margin-top: -144px;
+    animation-name: letter15;
+    animation-duration: 1.12s;
+    animation-delay: 0.98s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter15 {
+    from {
+      margin-top: -144px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(16):before {
+    content: "$>4*<_2&%?3#@1";
+    margin-top: -288px;
+    animation-name: letter16;
+    animation-duration: 1.90462s;
+    animation-delay: 0.86s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter16 {
+    from {
+      margin-top: -288px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(17):before {
+    content: "3$&4<2%>1@#*_?";
+    margin-top: 0px;
+    animation-name: letter17;
+    animation-duration: 1s;
+    animation-delay: 0.96s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter17 {
+    from {
+      margin-top: 0px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(18):before {
+    content: "41*$#?_%<>3@&2";
+    margin-top: -72px;
+    animation-name: letter18;
+    animation-duration: 3.2575s;
+    animation-delay: 0.57s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter18 {
+    from {
+      margin-top: -72px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(19):before {
+    content: "2#>4?@<&*%13_$";
+    margin-top: -120px;
+    animation-name: letter19;
+    animation-duration: 4.96667s;
+    animation-delay: 0.32s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter19 {
+    from {
+      margin-top: -120px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(20):before {
+    content: "3>&*4<1%2$#_?@";
+    margin-top: -216px;
+    animation-name: letter20;
+    animation-duration: 4.15s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter20 {
+    from {
+      margin-top: -216px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(21):before {
+    content: "%4<@&>?_12*#$3";
+    margin-top: -144px;
+    animation-name: letter21;
+    animation-duration: 3.7s;
+    animation-delay: 0.55s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter21 {
+    from {
+      margin-top: -144px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(22):before {
+    content: "<>1*?3&4$_#@2%";
+    margin-top: -264px;
+    animation-name: letter22;
+    animation-duration: 6.83917s;
+    animation-delay: 0.09s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter22 {
+    from {
+      margin-top: -264px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(23):before {
+    content: "_*31$<#?&%2@4>";
+    margin-top: -168px;
+    animation-name: letter23;
+    animation-duration: 2.3675s;
+    animation-delay: 0.94s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter23 {
+    from {
+      margin-top: -168px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(24):before {
+    content: "1_2?<&#@%3*4>$";
+    margin-top: -312px;
+    animation-name: letter24;
+    animation-duration: 3.6s;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter24 {
+    from {
+      margin-top: -312px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(25):before {
+    content: "?#>3<$%2&4_@*1";
+    margin-top: -264px;
+    animation-name: letter25;
+    animation-duration: 4.20833s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter25 {
+    from {
+      margin-top: -264px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(26):before {
+    content: "1%#<23$*@&4>_?";
+    margin-top: -240px;
+    animation-name: letter26;
+    animation-duration: 5.39091s;
+    animation-delay: 0.31s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter26 {
+    from {
+      margin-top: -240px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(27):before {
+    content: "1$*?@&<>43%2#_";
+    margin-top: -216px;
+    animation-name: letter27;
+    animation-duration: 4.843s;
+    animation-delay: 0.39s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter27 {
+    from {
+      margin-top: -216px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(28):before {
+    content: "#?2>*&%<$3@_41";
+    margin-top: -312px;
+    animation-name: letter28;
+    animation-duration: 3.34s;
+    animation-delay: 0.64s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter28 {
+    from {
+      margin-top: -312px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(29):before {
+    content: ">&134$@<?#2*%_";
+    margin-top: -168px;
+    animation-name: letter29;
+    animation-duration: 4.00125s;
+    animation-delay: 0.51s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter29 {
+    from {
+      margin-top: -168px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(30):before {
+    content: "<$@>*&1%4#_2?3";
+    margin-top: -264px;
+    animation-name: letter30;
+    animation-duration: 3.43833s;
+    animation-delay: 0.62s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter30 {
+    from {
+      margin-top: -264px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(31):before {
+    content: "#%><*&@$3?_412";
+    margin-top: -120px;
+    animation-name: letter31;
+    animation-duration: 5.08333s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter31 {
+    from {
+      margin-top: -120px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(32):before {
+    content: "4&@<2_>3#*?1$%";
+    margin-top: -120px;
+    animation-name: letter32;
+    animation-duration: 5.725s;
+    animation-delay: 0.19s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter32 {
+    from {
+      margin-top: -120px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }
+  .letter:nth-child(33):before {
+    content: "$#%>1*3&2?_4@<";
+    margin-top: -264px;
+    animation-name: letter33;
+    animation-duration: 5.29917s;
+    animation-delay: 0.33s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes letter33 {
+    from {
+      margin-top: -264px;
+    }
+    to {
+      margin-top: 60px;
+    }
+  }  
