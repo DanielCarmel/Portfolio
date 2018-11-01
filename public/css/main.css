@@ -77,12 +77,6 @@ body {
 	margin-left: 2%;
 }
 
-.home {
-}
-.about {
-	background:#ec8200;
-	background:hsl(28,100%,52%);
-}
 .projects {
 	background:#64a0d4;
 	background:hsl(200,60%,55%);

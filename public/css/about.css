@@ -1,0 +1,9 @@
+.about{
+    background: black;
+}
+
+.about .aboutContent{
+    color: aliceblue;
+    position: absolute;
+    font-size: xx-large;
+}
