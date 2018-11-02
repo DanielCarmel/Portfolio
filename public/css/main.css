@@ -81,12 +81,6 @@ body {
 	background:#64a0d4;
 	background:hsl(200,60%,55%);
 }
-.contact {
-	background: url("../img/cityMap1.jpg") no-repeat center center;
-	background-size: cover;
-	height: 100%;
-	overflow: hidden;
-}
 
 ol, ul {
 	list-style: none;   
