@@ -77,11 +77,6 @@ body {
 	margin-left: 2%;
 }
 
-.projects {
-	background:#64a0d4;
-	background:hsl(200,60%,55%);
-}
-
 ol, ul {
 	list-style: none;   
 }

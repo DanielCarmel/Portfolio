@@ -1,5 +1,5 @@
 .contact {
-	background: url("../img/snazzy.png") no-repeat center center;
+	background: url("../img/snazzyDark.png") no-repeat center center;
 	background-size: cover;
 	height: 100%;
     overflow: hidden;
@@ -7,7 +7,7 @@
 }
 
 .overlay{
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.4);
     overflow: hidden;
     height: 100%;
     z-index: -2;
@@ -15,4 +15,5 @@
 
 .form{
     position: absolute;
+    display: none;
 }
